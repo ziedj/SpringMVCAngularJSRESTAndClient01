@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.domains.User;
+import com.domains.XMLUser;
 
 @RestController
 public class MyRestController {
@@ -24,9 +25,14 @@ public class MyRestController {
 		this.users = users;
 	}
 
-	@RequestMapping(value = "/newUser")
+	@RequestMapping(value = "newJsonUser")
 	public User newUser() {
 		return (new User("zied", "zied"));
+	}
+
+	@RequestMapping(value = "newXMLUser", produces = "application/xml")
+	public XMLUser newXMLUser() {
+		return (new XMLUser("zied", "zied"));
 	}
 
 }

@@ -1,15 +1,18 @@
 package com.domains;
 
-public class User {
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
+public class XMLUser {
+	
 	private String name;
 	private String firstName;
 
-	public User() {
+	public XMLUser() {
 		super();
 	}
 
-	public User(String name, String firstName) {
+	public XMLUser(String name, String firstName) {
 		super();
 		this.name = name;
 		this.firstName = firstName;
